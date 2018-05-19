@@ -4,7 +4,7 @@ namespace Lab1
 {
     class Graph
     {
-        public int[,] IncidenceMatrix { get; set; }
+        public int[,] AdjacencyMatrix { get; set; }
         public int NodeCount { get; set; }
         public int ConnectionCount { get; set; }
 
@@ -13,10 +13,10 @@ namespace Lab1
             NodeCount = nodeCount;
             ConnectionCount = connectionCount;
 
-            IncidenceMatrix = new int[nodeCount,nodeCount];
+            AdjacencyMatrix = new int[nodeCount,nodeCount];
         }
 
-        public void CreateIncidenceMatrix(bool isRandom)
+        public void CreateAdjacencyMatrix(bool isRandom)
         {
             if (isRandom)
             {
@@ -29,11 +29,11 @@ namespace Lab1
                     for (int i = 0; i < NodeCount; i++)
                     {
                         int randomNode = random.Next(i, NodeCount);
-                        if (randomNode != i && IncidenceMatrix[i,randomNode] == 0)
+                        if (randomNode != i && AdjacencyMatrix[i,randomNode] == 0)
                         {
                             int randomWeight = random.Next(1, 10);
-                            IncidenceMatrix[i, randomNode] = randomWeight;
-                            IncidenceMatrix[randomNode, i] = randomWeight;
+                            AdjacencyMatrix[i, randomNode] = randomWeight;
+                            AdjacencyMatrix[randomNode, i] = randomWeight;
                             currConnectionCount++;
                         }
 
@@ -46,12 +46,12 @@ namespace Lab1
             }
             else
             {
-                Console.WriteLine("---< IncidenceMatrix[from, to]= weight >---");
+                Console.WriteLine("---< AdjacencyMatrix[from, to]= weight >---");
                 for(int i = 0; i < NodeCount; i++)
                 {
                     for(int j = i + 1; j < NodeCount; j++)
                     {
-                        Console.Write("IncidenceMatrix[" + (i + 1).ToString() + ',' + (j + 1).ToString() + "]= ");
+                        Console.Write("AdjacencyMatrix[" + (i + 1).ToString() + ',' + (j + 1).ToString() + "]= ");
                         
                         int weight;
                         if (!int.TryParse(Console.ReadLine(), out weight))
@@ -59,21 +59,21 @@ namespace Lab1
                             throw new Exception("You have to write a single number!");
                         }
 
-                        IncidenceMatrix[i, j] = weight;
-                        IncidenceMatrix[j, i] = weight;
+                        AdjacencyMatrix[i, j] = weight;
+                        AdjacencyMatrix[j, i] = weight;
                     }
                 }
             }
         }
 
-        public void PrintIncidenceMatrix()
+        public void PrintAdjacencyMatrix()
         {
-            Console.WriteLine("Incidence Matrix:");
+            Console.WriteLine("Adjacency Matrix:");
             for(int i = 0; i < NodeCount; i++)
             {
                 for(int j = 0; j < NodeCount; j++)
                 {
-                    Console.Write(string.Format("{0} ", IncidenceMatrix[i, j]));
+                    Console.Write(string.Format("{0} ", AdjacencyMatrix[i, j]));
                 }
                 Console.WriteLine();
             }
@@ -105,9 +105,9 @@ namespace Lab1
                 {
                     for(int j = 0; j< NodeCount; j++)
                     {
-                        if (IncidenceMatrix[i, j] != 0 && min > IncidenceMatrix[i,j] && nodes[i] != nodes[j])
+                        if (AdjacencyMatrix[i, j] != 0 && min > AdjacencyMatrix[i,j] && nodes[i] != nodes[j])
                         {
-                            min = IncidenceMatrix[i, j];
+                            min = AdjacencyMatrix[i, j];
                             nodeA = i;
                             nodeB = j;
                         }

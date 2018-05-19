@@ -31,7 +31,7 @@ namespace Lab1
             bool exit = false;
             while (!exit)
             {
-                Console.Write("Generate radnom incidence matrix?(Yes/No): ");
+                Console.Write("Generate radnom adjacency matrix?(Yes/No): ");
                 string decision = Console.ReadLine().ToLower();
                 switch (decision)
                 {
@@ -58,7 +58,7 @@ namespace Lab1
 
                 graph = new Graph(nodeCount, connectionCount);
 
-                graph.CreateIncidenceMatrix(isRandom);
+                graph.CreateAdjacencyMatrix(isRandom);
             }
             catch(Exception ex)
             {
@@ -67,7 +67,7 @@ namespace Lab1
                 return;
             }
 
-            graph.PrintIncidenceMatrix();
+            graph.PrintAdjacencyMatrix();
 
             int[,] spanningTree = graph.FindSpanningTree();
 
