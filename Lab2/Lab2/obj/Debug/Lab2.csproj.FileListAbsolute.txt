@@ -1,0 +1,7 @@
+C:\Users\Markiian\Desktop\Learning\Second course\Second\Web\C#\.Net_Labs\Lab2\Lab2\obj\Debug\Lab2.csprojAssemblyReference.cache
+C:\Users\Markiian\Desktop\Learning\Second course\Second\Web\C#\.Net_Labs\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\Markiian\Desktop\Learning\Second course\Second\Web\C#\.Net_Labs\Lab2\Lab2\bin\Debug\Lab2.exe.config
+C:\Users\Markiian\Desktop\Learning\Second course\Second\Web\C#\.Net_Labs\Lab2\Lab2\bin\Debug\Lab2.exe
+C:\Users\Markiian\Desktop\Learning\Second course\Second\Web\C#\.Net_Labs\Lab2\Lab2\bin\Debug\Lab2.pdb
+C:\Users\Markiian\Desktop\Learning\Second course\Second\Web\C#\.Net_Labs\Lab2\Lab2\obj\Debug\Lab2.exe
+C:\Users\Markiian\Desktop\Learning\Second course\Second\Web\C#\.Net_Labs\Lab2\Lab2\obj\Debug\Lab2.pdb
